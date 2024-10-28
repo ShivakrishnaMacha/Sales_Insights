@@ -36,10 +36,5 @@ This query retrieves all records from the `customers` table.
 SELECT * FROM customers;
 
 ---
-### 2. Retrieve Specific Customer Records
 
-This query returns the total count of customers in the customers table.
-
-```sql
-SELECT COUNT(*) FROM customers;
 
