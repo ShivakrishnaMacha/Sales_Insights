@@ -15,7 +15,7 @@ This project showcases the practical application of data visualization and analy
 
 This document showcases various SQL queries for analyzing customer and transaction data. Each query includes a description of its purpose.
 
-## Table of Contents
+## SQL Queries
 - [1. Show All Customer Records](#1-show-all-customer-records)
 - [2. Total Number of Customers](#2-total-number-of-customers)
 - [3. Transactions for Chennai Market](#3-transactions-for-chennai-market)
