@@ -35,3 +35,11 @@ This query retrieves all records from the `customers` table.
 ```sql
 SELECT * FROM customers;
 
+### 2. Total Number of Customers
+
+This query returns the total count of customers in the customers table.
+
+```sql
+SELECT COUNT(*) FROM customers;
+
+
