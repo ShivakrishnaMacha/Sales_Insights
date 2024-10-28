@@ -34,7 +34,87 @@ This query retrieves all records from the `customers` table.
 
 ```sql
 SELECT * FROM customers;
+```
+### 2. Total Number of Customers
 
----
+This query returns the total count of customers in the customers table.
+
+```sql
+SELECT COUNT(*) FROM customers;
+```
+
+### 3.Transactions for Chennai Market
+
+This query fetches all transaction records from the transactions table where the market code is Mark001 (Chennai).
+
+```sql
+SELECT * FROM transactions WHERE market_code = 'Mark001';
+```
+
+### 4.Distinct Product Codes Sold in Chennai
+
+This query retrieves distinct product codes for products sold in the Chennai market.
+
+```sql
+SELECT DISTINCT product_code FROM transactions WHERE market_code = 'Mark001';
+```
+
+### 5.Transactions in US Dollars
+
+This query displays all transactions where the currency is in USD.
+
+```sql
+SELECT * FROM transactions WHERE currency = "USD";
+```
+
+### 6. Transactions in 2020 (Join by Date Table)
+
+This query joins the transactions table with the date table to show all transactions from the year 2020.
+
+```sql
+SELECT transactions.*, date.* 
+FROM transactions 
+INNER JOIN date ON transactions.order_date = date.date 
+WHERE date.year = 2020;
+```
+
+### 7. Total Revenue in 2020
+
+This query calculates the total revenue generated in the year 2020, considering both INR and USD currencies.
+
+```sql
+SELECT SUM(transactions.sales_amount) 
+FROM transactions 
+INNER JOIN date ON transactions.order_date = date.date 
+WHERE date.year = 2020 
+  AND (transactions.currency = "INR" OR transactions.currency = "USD");
+```
+
+### 8. Total Revenue in January 2020
+
+This query shows the total revenue generated in January 2020.
+
+```sql
+SELECT SUM(transactions.sales_amount) 
+FROM transactions 
+INNER JOIN date ON transactions.order_date = date.date 
+WHERE date.year = 2020 
+  AND date.month_name = "January" 
+  AND (transactions.currency = "INR" OR transactions.currency = "USD");
+```
+
+### 9. Total Revenue in 2020 for Chennai
+This query calculates the total revenue generated in 2020 for the Chennai market (market code Mark001).
+
+```sql
+SELECT SUM(transactions.sales_amount) 
+FROM transactions 
+INNER JOIN date ON transactions.order_date = date.date 
+WHERE date.year = 2020 
+  AND transactions.market_code = "Mark001";
+```
+
+
+
 
 
