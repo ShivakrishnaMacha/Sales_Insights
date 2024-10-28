@@ -1,4 +1,4 @@
-### Sales Insights Dashboard
+# Sales Insights Dashboard
 
 **Project Overview:**
 This project involved designing a comprehensive Power BI dashboard for a brick-and-mortar business to analyze and visualize sales trends of AtliQ hardware goods. Using Power BI and SQL, the dashboard provides an interactive and insightful view of the sales performance, enabling users to make data-driven decisions effectively.
@@ -11,7 +11,7 @@ This project involved designing a comprehensive Power BI dashboard for a brick-a
 
 This project showcases the practical application of data visualization and analysis to support informed decision-making in a retail business environment.
 
-# SQL Queries for Customer and Transaction Analysis
+## SQL Queries for Customer and Transaction Analysis
 
 This document showcases various SQL queries for analyzing customer and transaction data. Each query includes a description of its purpose.
 
@@ -34,12 +34,3 @@ This query retrieves all records from the `customers` table.
 
 ```sql
 SELECT * FROM customers;
-
-### 2. Total Number of Customers
-
-This query returns the total count of customers in the customers table.
-
-```sql
-SELECT COUNT(*) FROM customers;
-
-
